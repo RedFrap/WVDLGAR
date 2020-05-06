@@ -1,5 +1,7 @@
 body {
-  background-image: url("https://wallpaperaccess.com/full/671896.jpg");
+  background-image: url("https://wallpaperaccess.com/full/876269.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: sans-serif;
   background-color: #ffffff;
 }
@@ -8,9 +10,6 @@ body {
     padding: 5% 2%;
     margin: 0 auto;
     border-radius: 5px;
-    border: solid 1.5px #f6f7fa;
-    background-color: #f6f7fa;
-
     
 }
 
@@ -65,7 +64,7 @@ body {
     object-fit: contain;
     border-radius: 10px;
     border: dashed 1.5px #35465d;
-    background-color: #ffffff;
+    
 }
 
 .image-dropping,
@@ -167,6 +166,35 @@ body {
     text-align: center;
 }
 
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+P
 @media screen and (max-width: 600px) {
   html {
     font-size: 10px;

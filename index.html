@@ -62,26 +62,22 @@
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
 
-            <!-- Loading... -->
-            <div class="d-flex justify-content-center" style="display:none;">
-                <div class="spinner-border" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
+            <!-- loading spinner -->
+            <div class="lds-dual-ring">
+                <p class="text-center">AI is analyzing your image.</p>
             </div>
 
             <p class="result-message"></p>
             <div id="label-container" style="display:none"></div>
+        </div>
+    </div>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
 
-            <!-- Go to www.addthis.com/dashboard to customize your tools -->
-            <div id="addThis" class="addthis_inline_share_toolbox"></div>
+    <div id="afterresultMessage">
+        <div id="addThis" class="addthis_inline_share_toolbox"></div>
 
-            
-            
-            <div class="image-title-wrap">
-                <button type="button" onclick="removeUpload()" class="pd-2 mt-3 remove-image">Remove
-
-                </button>
-            </div>
+        <div class="image-title-wrap">
+            <button type="button" onclick="removeUpload()" class="pd-2 mt-3 remove-image">Remove</button>
         </div>
     </div>
 
@@ -241,22 +237,6 @@
                     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
-        }
-    </script>
-    <!-- 추가함   -->
-    <script>
-        function iosApp() {
-            document.getElementById("addThis").style.display = "none";
-            for (var i = 0; i < kakao.length; i++) {
-                if (kakao[i]) {
-                    kakao[i].style.display = "none";
-                }
-            }
-            document.getElementById("yotube-top-link").style.display = "none";
-            document.getElementById("yotube-mid-link").style.display = "none";
-            document.getElementById("yotube-bottom-link").remove();
-            document.getElementById("moreInfo").remove();
-            document.getElementById("goToBlog").remove();
         }
     </script>
 
