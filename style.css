@@ -113,7 +113,8 @@ body {
   font-weight: 700;
 }
 .result-message {
-  font-size: 1.5rem
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 
@@ -194,7 +195,7 @@ body {
   }
 }
 
-P
+
 @media screen and (max-width: 600px) {
   html {
     font-size: 10px;

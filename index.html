@@ -11,9 +11,6 @@
 
     <title>Which Van Der Linde Gang Member Are you</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5eae863e6ba23959"></script>
-
 </head>
 
 <body>
@@ -62,22 +59,17 @@
         <div class="file-upload-content">
             <img class="file-upload-image" id="face-image" src="#" alt="your image" />
 
-            <!-- loading spinner -->
-            <div class="lds-dual-ring">
-                <p class="text-center">AI is analyzing your image.</p>
-            </div>
-
             <p class="result-message"></p>
             <div id="label-container" style="display:none"></div>
-        </div>
-    </div>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
 
-    <div id="afterresultMessage">
-        <div id="addThis" class="addthis_inline_share_toolbox"></div>
+            <!-- Loading... -->
+            <div id="spinner" class="spinner-border text-secondary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
 
-        <div class="image-title-wrap">
-            <button type="button" onclick="removeUpload()" class="pd-2 mt-3 remove-image">Remove</button>
+            <div class="image-title-wrap">
+                <button type="button" onclick="removeUpload()" class="pd-2 mt-3 remove-image">Remove</button>
+            </div>
         </div>
     </div>
 
@@ -121,6 +113,11 @@
         });
         $('.image-upload-wrap').bind('dragleave', function() {
             $('.image-upload-wrap').removeClass('image-dropping');
+        });
+        $(document).ready(predict() {
+            $("button").click(predict() {
+                $("p").slideToggle();
+            });
         });
     </script>
     <script type="text/javascript">
@@ -236,6 +233,7 @@
                 const classPrediction =
                     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
                 labelContainer.childNodes[i].innerHTML = classPrediction;
+                $("#spinner").toggle();
             }
         }
     </script>
